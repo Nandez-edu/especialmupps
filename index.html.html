@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprende sobre la Inclusión - Sitio Informativo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #780000;
+            color: #fdf0d5;
+            transition: all 0.3s ease-in-out;
+        }
+        /* Custom scrollbar for beautiful appearance */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #780000;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #fdf0d5;
+            border-radius: 10px;
+        }
+        /* Fade-in transitions for screen navigation */
+        .screen-transition {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between overflow-x-hidden p-4 md:p-8">
+
+    <main class="flex-grow flex items-center justify-center max-w-5xl mx-auto w-full">
+        
+        <!-- PESTAÑA 1: BIENVENIDA -->
+        <section id="screen-welcome" class="screen-transition w-full text-center flex flex-col items-center justify-center space-y-8 py-12">
+            <div class="space-y-4">
+                <span class="text-xs uppercase tracking-widest font-semibold bg-[#fdf0d5] text-[#003049] px-4 py-1.5 rounded-full shadow-md">
+                    Portal Educativo e Inclusivo
+                </span>
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-[#fdf0d5] max-w-2xl leading-tight">
+                    Especial Mupps
+                </h1>
+                <p class="text-lg md:text-xl text-[#fdf0d5]/80 max-w-lg mx-auto">
+                    Un espacio donde los muppets hacen de la inclusión una aventura de aprendizaje.
+                </p>
+            </div>
+
+            <img src="img/Especial mupps.png" alt="Especial Mupps" width="50%">
+
+            <button onclick="goToScreen('screen-character-intro')" 
+                    class="bg-[#fdf0d5] text-[#003049] text-xl font-bold px-12 py-4 rounded-2xl shadow-[0_10px_20px_rgba(0,0,0,0.3)] hover:scale-105 active:scale-95 hover:bg-white hover:shadow-[0_15px_25px_rgba(0,0,0,0.4)] transition-all duration-300 transform">
+                Entrar
+            </button>
+        </section>
+
+        <!-- PESTAÑA 2: INTRODUCCIÓN DEL PERSONAJE GUÍA -->
+        <section id="screen-character-intro" class="hidden screen-transition w-full max-w-3xl mx-auto">
+            <div class="bg-[#fdf0d5] text-[#003049] rounded-3xl p-6 md:p-10 shadow-2xl space-y-8 border-4 border-[#003049]/20">
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <!-- Avatar del Personaje Guía (Gabriel) -->
+                    <div class="w-40 h-40 bg-[#003049] rounded-full flex-shrink-0 flex items-center justify-center shadow-lg border-4 border-[#fdf0d5] overflow-hidden relative">
+                        <!-- SVG de Gabriel, un personaje simpático -->
+                        <svg class="w-32 h-32 text-[#fdf0d5]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Cabeza y cuerpo -->
+                            <circle cx="50" cy="45" r="30" fill="#fdf0d5" stroke="#003049" stroke-width="4"/>
+                            <!-- Pelo alegre -->
+                            <path d="M22 35C22 35 30 20 50 25C70 20 78 35 78 35" stroke="#003049" stroke-width="5" stroke-linecap="round"/>
+                            <!-- Ojos expresivos -->
+                            <circle cx="40" cy="45" r="4" fill="#003049"/>
+                            <circle cx="60" cy="45" r="4" fill="#003049"/>
+                            <!-- Gafas de explorador/sabio -->
+                            <circle cx="40" cy="45" r="9" stroke="#003049" stroke-width="3"/>
+                            <circle cx="60" cy="45" r="9" stroke="#003049" stroke-width="3"/>
+                            <line x1="49" y1="45" x2="51" y2="45" stroke="#003049" stroke-width="3"/>
+                            <!-- Gran Sonrisa -->
+                            <path d="M40 60Q50 68 60 60" stroke="#003049" stroke-width="4" stroke-linecap="round" fill="none"/>
+                            <!-- Sonrojo tierno -->
+                            <circle cx="31" cy="53" r="3" fill="#ff8a8a"/>
+                            <circle cx="69" cy="53" r="3" fill="#ff8a8a"/>
+                        </svg>
+                    </div>
+
+                    <!-- Mensaje del Guía -->
+                    <div class="text-center md:text-left space-y-4">
+                        <span class="bg-[#003049] text-[#fdf0d5] px-3 py-1 rounded-full text-sm font-bold uppercase tracking-wider">
+                            Tu Guía de Aprendizaje
+                        </span>
+                        <h2 class="text-3xl font-extrabold text-[#003049]">¡Hola, soy Gabriel!</h2>
+                        <p class="text-lg text-[#003049]/95 leading-relaxed">
+                            ¡Bienvenido a Especial Mupps! Soy Gabriel y, junto con mis amigos, te acompañaré en un increíble viaje para conocer las diferentes discapacidades. A través de historias, juegos y muchas sorpresas, aprenderemos que la diversidad nos hace más fuertes y que todos merecemos respeto, comprensión y amistad.  
+                        </p>
+                        <p class="text-md text-[#003049]/80 font-medium">
+                            ¡Ven y descubre este maravilloso mundo con nosotros!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Botón para avanzar -->
+                <div class="flex justify-center md:justify-end pt-4">
+                    <button onclick="goToScreen('screen-dashboard')" 
+                            class="bg-[#003049] text-[#fdf0d5] text-lg font-bold px-8 py-4 rounded-xl shadow-lg hover:bg-[#003049]/90 hover:scale-105 active:scale-95 transition-all flex items-center gap-2">
+                        <span>Acompáñame</span>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 5l7 7-7 7M5 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- PESTAÑA 3: MENÚ DE 5 BOTONES (DASHBOARD) -->
+        <section id="screen-dashboard" class="hidden screen-transition w-full text-center space-y-8 py-6">
+            <div class="space-y-2">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-[#fdf0d5]">¿Qué te gustaría explorar hoy?</h2>
+                <p class="text-md md:text-lg text-[#fdf0d5]/85">Selecciona una categoría para aprender con nuestros guías especiales</p>
+            </div>
+
+            <!-- Panel de botones responsivo -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto px-4">
+                
+                <!-- Botón 1: Discapacidad Visual -->
+                <button onclick="viewDisability('visual')" 
+                        class="bg-[#fdf0d5] text-[#003049] p-6 rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 active:translate-y-0 transition-all duration-300 flex flex-col items-center justify-between space-y-4 group">
+                    <div class="w-16 h-16 bg-[#003049]/10 rounded-full flex items-center justify-center group-hover:bg-[#003049]/20 transition-colors">
+                        <svg class="w-10 h-10 text-[#003049]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold tracking-tight">Discapacidad Visual</span>
+                </button>
+
+                <!-- Botón 2: Discapacidad Auditiva -->
+                <button onclick="viewDisability('auditiva')" 
+                        class="bg-[#fdf0d5] text-[#003049] p-6 rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 active:translate-y-0 transition-all duration-300 flex flex-col items-center justify-between space-y-4 group">
+                    <div class="w-16 h-16 bg-[#003049]/10 rounded-full flex items-center justify-center group-hover:bg-[#003049]/20 transition-colors">
+                        <svg class="w-10 h-10 text-[#003049]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/>
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold tracking-tight">Discapacidad Auditiva</span>
+                </button>
+
+                <!-- Botón 3: Discapacidad Motriz -->
+                <button onclick="viewDisability('motriz')" 
+                        class="bg-[#fdf0d5] text-[#003049] p-6 rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 active:translate-y-0 transition-all duration-300 flex flex-col items-center justify-between space-y-4 group">
+                    <div class="w-16 h-16 bg-[#003049]/10 rounded-full flex items-center justify-center group-hover:bg-[#003049]/20 transition-colors">
+                        <svg class="w-10 h-10 text-[#003049]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <!-- Simple wheelchair symbolic SVG -->
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14a6 6 0 1 1-12 0 6 6 0 0 1 12 0zm-6-6v-3h3m-3 3h-2a2 2 0 0 0-2 2v4"/>
+                            <circle cx="13" cy="5" r="1.5" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold tracking-tight">Discapacidad Motriz</span>
+                </button>
+
+                <!-- Botón 4: Discapacidad Intelectual -->
+                <button onclick="viewDisability('intelectual')" 
+                        class="bg-[#fdf0d5] text-[#003049] p-6 rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 active:translate-y-0 transition-all duration-300 flex flex-col items-center justify-between space-y-4 group sm:col-span-1 lg:col-span-1">
+                    <div class="w-16 h-16 bg-[#003049]/10 rounded-full flex items-center justify-center group-hover:bg-[#003049]/20 transition-colors">
+                        <svg class="w-10 h-10 text-[#003049]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold tracking-tight">Discapacidad Intelectual</span>
+                </button>
+
+                <!-- Botón 5: Discapacidad Psicosocial -->
+                <button onclick="viewDisability('psicosocial')" 
+                        class="bg-[#fdf0d5] text-[#003049] p-6 rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 active:translate-y-0 transition-all duration-300 flex flex-col items-center justify-between space-y-4 group sm:col-span-2 lg:col-span-1">
+                    <div class="w-16 h-16 bg-[#003049]/10 rounded-full flex items-center justify-center group-hover:bg-[#003049]/20 transition-colors">
+                        <svg class="w-10 h-10 text-[#003049]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold tracking-tight">Discapacidad Psicosocial</span>
+                </button>
+
+            </div>
+
+            <div class="pt-6">
+                <button onclick="goToScreen('screen-character-intro')" 
+                        class="text-[#fdf0d5]/85 hover:text-white font-semibold flex items-center gap-2 mx-auto border-b border-[#fdf0d5]/40 hover:border-white transition-all py-1">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/>
+                    </svg>
+                    Volver con Gabriel
+                </button>
+            </div>
+        </section>
+
+        <!-- PESTAÑA 4: DETALLES DE CADA DISCAPACIDAD -->
+        <section id="screen-detail" class="hidden screen-transition w-full max-w-4xl mx-auto space-y-6">
+            
+            <!-- Botón de regreso rápido -->
+            <button onclick="goToScreen('screen-dashboard')" 
+                    class="bg-[#fdf0d5] text-[#003049] font-bold px-5 py-2.5 rounded-xl shadow-md hover:scale-105 active:scale-95 transition-all flex items-center gap-2 mb-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 19l-7-7 7-7m8 14l-7-7 7-7"/>
+                </svg>
+                <span>Ver otras discapacidades</span>
+            </button>
+
+            <!-- Contenedor Principal de la Información -->
+            <div class="bg-[#fdf0d5] text-[#003049] rounded-3xl p-6 md:p-10 shadow-2xl space-y-8 border-4 border-[#003049]/10">
+                
+                <!-- Encabezado con Personaje de la Discapacidad -->
+                <div class="flex flex-col md:flex-row items-center gap-6 pb-6 border-b-2 border-[#003049]/10">
+                    
+                    <!-- Avatar Dinámico del Personaje de la Discapacidad -->
+                    <div class="w-36 h-36 bg-[#003049] rounded-2xl flex-shrink-0 flex items-center justify-center shadow-lg overflow-hidden relative border-4 border-white" id="character-avatar">
+                        <!-- Aquí se insertará el SVG correspondiente vía JavaScript -->
+                    </div>
+
+                    <!-- Datos del Guía y Discapacidad -->
+                    <div class="text-center md:text-left space-y-2">
+                        <h3 class="text-xl md:text-2xl font-black text-[#003049]/75 uppercase tracking-wide" id="detail-badge-title">
+                            Discapacidad
+                        </h3>
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-[#003049] leading-tight" id="detail-title">
+                            Nombre de la Discapacidad
+                        </h2>
+                        <p class="text-lg font-bold text-[#003049]/80">
+                            Hola, mi nombre es <span id="character-name" class="underline decoration-[#780000] decoration-2">Guía</span> y te explicaré sobre esto:
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Explicación del Personaje -->
+                <div class="space-y-4">
+                    <h4 class="text-lg font-bold uppercase tracking-wider text-[#003049]/80 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-[#780000]" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                        </svg>
+                        ¿En qué consiste?
+                    </h4>
+                    <p id="detail-description" class="text-lg text-[#003049]/95 leading-relaxed bg-white/50 p-5 rounded-2xl border border-[#003049]/5 shadow-inner">
+                        Explicación detallada de la discapacidad...
+                    </p>
+                </div>
+
+                <!-- Zona del Video de YouTube (Maquetada para integración rápida posterior) -->
+                <div class="space-y-4 pt-2">
+                    <div class="flex items-center justify-between">
+                        <h4 class="text-lg font-bold uppercase tracking-wider text-[#003049]/80 flex items-center gap-2">
+                            <svg class="w-5 h-5 text-[#780000]" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"/>
+                            </svg>
+                            Video Explicativo
+                        </h4>
+                        <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-[#003049] text-[#fdf0d5]">
+                            Próxima integración
+                        </span>
+                    </div>
+
+                    <!-- Contenedor del video interactivo / simulación -->
+                    <div class="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl border-4 border-[#003049] bg-black group" id="video-container">
+                        <!-- El iframe dinámico se cargará aquí. Actualmente muestra una interfaz muy intuitiva -->
+                        <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-gradient-to-t from-black via-black/80 to-[#003049]/80 text-[#fdf0d5] space-y-4">
+                            <div class="w-20 h-20 bg-[#fdf0d5] rounded-full flex items-center justify-center text-[#780000] shadow-lg group-hover:scale-110 active:scale-95 transition-all duration-300 cursor-pointer">
+                                <svg class="w-10 h-10 ml-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                            <div class="max-w-md">
+                                <p class="font-bold text-lg" id="video-mockup-title">Cargando video interactivo...</p>
+                                <p class="text-sm text-[#fdf0d5]/70 mt-1">Aquí se mostrará el contenido audiovisual de YouTube para facilitar el aprendizaje visual.</p>
+                            </div>
+                            <!-- Nota técnica para el administrador -->
+                            <div class="text-[10px] uppercase tracking-wider bg-white/10 px-3 py-1 rounded-md text-[#fdf0d5]/50">
+                                Código preparado para incrustar iframe de YouTube
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="w-full text-center text-xs py-4 text-[#fdf0d5]/60 mt-12 border-t border-[#fdf0d5]/10">
+        <p>© Especial Mupps. Todos los derechos reservados. 2026</p>
+    </footer>
+
+    <script>
+        // Data de las discapacidades, personajes y videos
+        const disabilitiesData = {
+            visual: {
+                title: "Discapacidad Visual",
+                badge: "Discapacidad Sensorial",
+                characterName: "Sofia",
+                description: "¡Hola! Soy Sofia. Las personas con discapacidad visual percibimos el mundo a través del tacto, el oído, el olfato y, sobre todo, el corazón. Para ser independientes, muchos de nosotros utilizamos un bastón blanco que nos ayuda a detectar obstáculos en el camino, y leemos mediante el sistema Braille (puntos en relieve). ¡También nos encanta la tecnología que nos lee la pantalla en voz alta!",
+                youtubeId: "DEMO_YOUTUBE_ID_VISUAL", // Aquí colocarás el ID del video de youtube, ej: "l7N_T8jF_Lg"
+                characterSvg: `
+                    <svg class="w-28 h-28 text-[#fdf0d5]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="35" fill="#fdf0d5" stroke="#003049" stroke-width="4"/>
+                        <!-- Orejas bonitas de gato/lupa -->
+                        <path d="M25 22L38 30M75 22L62 30" stroke="#003049" stroke-width="4" stroke-linecap="round"/>
+                        <!-- Lentes oscuros elegantes -->
+                        <rect x="23" y="40" width="22" height="15" rx="5" fill="#003049"/>
+                        <rect x="55" y="40" width="22" height="15" rx="5" fill="#003049"/>
+                        <line x1="45" y1="47" x2="55" y2="47" stroke="#003049" stroke-width="4"/>
+                        <!-- Sonrisa amigable -->
+                        <path d="M42 67Q50 73 58 67" stroke="#003049" stroke-width="3" stroke-linecap="round" fill="none"/>
+                        <!-- Bastoncito de guía pequeño de adorno -->
+                        <line x1="48" y1="75" x2="52" y2="75" stroke="#ff8a8a" stroke-width="4" stroke-linecap="round"/>
+                    </svg>
+                `
+            },
+            auditiva: {
+                title: "Discapacidad Auditiva",
+                badge: "Discapacidad Sensorial",
+                characterName: "Emiliano",
+                description: "¡Hola! Me llamo Emiliano. Las personas sordas o con pérdida auditiva nos comunicamos principalmente de forma visual. Nuestra lengua materna es la Lengua de Señas, la cual es rica, expresiva y tiene su propia gramática mediante hermosos movimientos de manos y gestos faciales. El silencio no impide que estemos llenos de historias increíbles que compartir.",
+                youtubeId: "DEMO_YOUTUBE_ID_AUDITIVA",
+                characterSvg: `
+                    <svg class="w-28 h-28 text-[#fdf0d5]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="35" fill="#fdf0d5" stroke="#003049" stroke-width="4"/>
+                        <!-- Orejas detalladas y grandes para representar la escucha -->
+                        <path d="M11 42Q5 45 11 55" stroke="#003049" stroke-width="4" stroke-linecap="round" fill="none"/>
+                        <path d="M89 42Q95 45 89 55" stroke="#003049" stroke-width="4" stroke-linecap="round" fill="none"/>
+                        <!-- Ojos felices mirando de lado -->
+                        <path d="M32 45Q37 40 42 45" stroke="#003049" stroke-width="3" stroke-linecap="round" fill="none"/>
+                        <path d="M58 45Q63 40 68 45" stroke="#003049" stroke-width="3" stroke-linecap="round" fill="none"/>
+                        <!-- Sonrisa abierta entusiasta -->
+                        <path d="M43 60Q50 72 57 60" fill="#003049" stroke="#003049" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                `
+            },
+            motriz: {
+                title: "Discapacidad Motriz",
+                badge: "Discapacidad Física",
+                characterName: "Luisa",
+                description: "¡Hola! Soy Luisa. La discapacidad motriz significa que mi cuerpo necesita apoyo o adaptaciones (como mi súper silla de ruedas, andaderas o prótesis) para poder desplazarme o realizar movimientos con precisión. Lo más genial es que, cuando las escuelas y las ciudades cuentan con rampas anchas, elevadores y accesos nivelados, ¡puedo explorar el mundo entero sin límites!",
+                youtubeId: "DEMO_YOUTUBE_ID_MOTRIZ",
+                characterSvg: `
+                    <svg class="w-28 h-28 text-[#fdf0d5]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="45" r="30" fill="#fdf0d5" stroke="#003049" stroke-width="4"/>
+                        <!-- Casco deportivo genial -->
+                        <path d="M22 35Q50 15 78 35" fill="#003049"/>
+                        <!-- Ojos chispeantes de energía -->
+                        <circle cx="40" cy="45" r="3.5" fill="#003049"/>
+                        <circle cx="60" cy="45" r="3.5" fill="#003049"/>
+                        <path d="M38 41L42 41M58 41L62 41" stroke="#003049" stroke-width="2" stroke-linecap="round"/>
+                        <!-- Gran Sonrisa -->
+                        <path d="M41 58Q50 66 59 58" stroke="#003049" stroke-width="3" stroke-linecap="round" fill="none"/>
+                        <!-- Mejillas sonrosadas -->
+                        <circle cx="32" cy="52" r="3" fill="#ff8a8a"/>
+                        <circle cx="68" cy="52" r="3" fill="#ff8a8a"/>
+                    </svg>
+                `
+            },
+            intelectual: {
+                title: "Discapacidad Intelectual",
+                badge: "Discapacidad Cognitiva",
+                characterName: "Martin",
+                description: "¡Hola, soy Martin! La discapacidad intelectual nos hace procesar la información de una manera un poco diferente y a ritmos particulares. Es genial cuando las personas nos explican con palabras sencillas, dibujos o textos en 'Lectura Fácil'. A veces nos cuesta un poquito más de tiempo aprender cosas nuevas, pero con paciencia, empatía y apoyos visuales, ¡logramos grandes metas!",
+                youtubeId: "DEMO_YOUTUBE_ID_INTELECTUAL",
+                characterSvg: `
+                    <svg class="w-28 h-28 text-[#fdf0d5]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="35" fill="#fdf0d5" stroke="#003049" stroke-width="4"/>
+                        <!-- Ojos llenos de curiosidad -->
+                        <circle cx="38" cy="48" r="4" fill="#003049"/>
+                        <circle cx="62" cy="48" r="4" fill="#003049"/>
+                        <!-- Cejas expresivas elevadas -->
+                        <path d="M32 40Q38 36 42 41" stroke="#003049" stroke-width="2" stroke-linecap="round" fill="none"/>
+                        <path d="M68 40Q62 36 58 41" stroke="#003049" stroke-width="2" stroke-linecap="round" fill="none"/>
+                        <!-- Sonrisa adorable con un diente gracioso -->
+                        <path d="M42 62Q50 70 58 62" stroke="#003049" stroke-width="3" stroke-linecap="round" fill="none"/>
+                        <!-- Corazón en la mejilla simbolizando empatía -->
+                        <path d="M48 30Q50 28 52 30Q54 32 50 36Q46 32 48 30Z" fill="#ff8a8a"/>
+                    </svg>
+                `
+            },
+            psicosocial: {
+                title: "Discapacidad Psicosocial",
+                badge: "Salud Mental & Neurodiversidad",
+                characterName: "Linda",
+                description: "¡Hola, soy Linda! La discapacidad psicosocial se relaciona con alteraciones temporales o permanentes en la forma en que sentimos, pensamos o interactuamos con nuestro entorno. Puede incluir condiciones de salud mental o neurodivergencias. Para nosotros es súper importante estar en espacios libres de prejuicios, llenos de respeto, apoyo emocional mutuo y sobre todo, comprensión profunda de que la mente humana es maravillosamente diversa.",
+                youtubeId: "DEMO_YOUTUBE_ID_PSICOSOCIAL",
+                characterSvg: `
+                    <svg class="w-28 h-28 text-[#fdf0d5]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="35" fill="#fdf0d5" stroke="#003049" stroke-width="4"/>
+                        <!-- Cabello rizado en forma de nubes/ideas -->
+                        <path d="M22 30C15 35 15 50 20 55C15 65 30 75 35 70M78 30C85 35 85 50 80 55C85 65 70 75 65 70" stroke="#003049" stroke-width="3" fill="none"/>
+                        <!-- Ojos pacíficos y relajados -->
+                        <path d="M34 50Q40 47 44 51" stroke="#003049" stroke-width="3" stroke-linecap="round" fill="none"/>
+                        <path d="M66 50Q60 47 56 51" stroke="#003049" stroke-width="3" stroke-linecap="round" fill="none"/>
+                        <!-- Sonrisa suave y calmada -->
+                        <path d="M44 65Q50 69 56 65" stroke="#003049" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+                        <!-- Estrella mágica de calma -->
+                        <polygon points="50,22 52,27 57,27 53,30 55,35 50,32 45,35 47,30 43,27 48,27" fill="#ff8a8a"/>
+                    </svg>
+                `
+            }
+        };
+
+        // Función para cambiar de pestaña con suavidad
+        function goToScreen(screenId) {
+            // Ocultar todas las secciones principales
+            const screens = ['screen-welcome', 'screen-character-intro', 'screen-dashboard', 'screen-detail'];
+            screens.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.classList.add('hidden');
+            });
+
+            // Mostrar la seleccionada
+            const targetScreen = document.getElementById(screenId);
+            if (targetScreen) {
+                targetScreen.classList.remove('hidden');
+                // Scroll arriba automáticamente para mejor experiencia de usuario
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        // Función para abrir los detalles de la discapacidad seleccionada
+        function viewDisability(key) {
+            const data = disabilitiesData[key];
+            if (!data) return;
+
+            // Llenar información de la interfaz
+            document.getElementById('detail-title').innerText = data.title;
+            document.getElementById('detail-badge-title').innerText = data.badge;
+            document.getElementById('character-name').innerText = data.characterName;
+            document.getElementById('detail-description').innerText = data.description;
+            document.getElementById('character-avatar').innerHTML = data.characterSvg;
+
+            // Preparar el contenedor de video de YouTube
+            const videoContainer = document.getElementById('video-container');
+            
+            /* 
+               NOTA PARA EL ADMINISTRADOR:
+               Cuando tengas los links reales de YouTube, puedes reemplazar la maqueta visual 
+               descomentando la sección inferior de JavaScript para renderizar el iframe oficial.
+            */
+            
+            // TITULO DEL VIDEO DE MAQUETA
+            document.getElementById('video-mockup-title').innerText = `Video Educativo: Explicando la ${data.title}`;
+
+            // EJEMPLO DE RENDERIZADO DEL IFRAME DE YOUTUBE (Para cuando tengas los enlaces listos):
+            /*
+            if (data.youtubeId && data.youtubeId !== "" && !data.youtubeId.startsWith("DEMO_")) {
+                videoContainer.innerHTML = `
+                    <iframe 
+                        class="w-full h-full" 
+                        src="https://www.youtube.com/embed/${data.youtubeId}?autoplay=0" 
+                        title="${data.title}" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                `;
+            } else {
+                // Mantener maqueta visual si no hay ID cargado
+                videoContainer.innerHTML = `
+                    <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-gradient-to-t from-black via-black/80 to-[#003049]/80 text-[#fdf0d5] space-y-4">
+                        <div class="w-16 h-16 bg-[#fdf0d5] rounded-full flex items-center justify-center text-[#780000] shadow-lg hover:scale-110 active:scale-95 transition-all duration-300 cursor-pointer">
+                            <svg class="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                        <div class="max-w-md">
+                            <p class="font-bold text-lg">Próximamente: Video de ${data.title}</p>
+                            <p class="text-xs text-[#fdf0d5]/70 mt-1">Inserta tu ID de YouTube en el código para mostrar el video real.</p>
+                        </div>
+                    </div>
+                `;
+            }
+            */
+
+            // Ir a la pestaña de detalles
+            goToScreen('screen-detail');
+        }
+    </script>
+</body>
+</html>
