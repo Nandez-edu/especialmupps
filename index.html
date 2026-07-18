@@ -58,7 +58,7 @@ Un espacio donde los muppets hacen de la inclusión una aventura de aprendizaje.
 </p>
 </div>
 
-<img src="img/Especial mupps.png" alt="Especial Mupps" width="50%">
+<img src="img/Especial mupps.png" alt="Especial Mupps" width="50%" onerror="this.src='https://placehold.co/600x300/fdf0d5/003049?text=Especial+Mupps'">
 
 <button onclick="goToScreen('screen-character-intro')" 
 class="bg-[#fdf0d5] text-[#003049] text-xl font-bold px-12 py-4 rounded-2xl shadow-[0_10px_20px_rgba(0,0,0,0.3)] hover:scale-105 active:scale-95 hover:bg-white hover:shadow-[0_15px_25px_rgba(0,0,0,0.4)] transition-all duration-300 transform">
@@ -159,7 +159,6 @@ class="bg-[#fdf0d5] text-[#003049] p-6 rounded-2xl shadow-xl hover:shadow-2xl ho
 class="bg-[#fdf0d5] text-[#003049] p-6 rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 active:translate-y-0 transition-all duration-300 flex flex-col items-center justify-between space-y-4 group">
 <div class="w-16 h-16 bg-[#003049]/10 rounded-full flex items-center justify-center group-hover:bg-[#003049]/20 transition-colors">
 <svg class="w-10 h-10 text-[#003049]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-<!-- Simple wheelchair symbolic SVG -->
 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14a6 6 0 1 1-12 0 6 6 0 0 1 12 0zm-6-6v-3h3m-3 3h-2a2 2 0 0 0-2 2v4"/>
 <circle cx="13" cy="5" r="1.5" fill="currentColor"/>
 </svg>
@@ -253,7 +252,7 @@ Explicación detallada de la discapacidad...
 </p>
 </div>
 
-<!-- Zona del Video de YouTube (Maquetada para integración rápida posterior) -->
+<!-- Zona del Video de YouTube -->
 <div class="space-y-4 pt-2">
 <div class="flex items-center justify-between">
 <h4 class="text-lg font-bold uppercase tracking-wider text-[#003049]/80 flex items-center gap-2">
@@ -262,29 +261,11 @@ Explicación detallada de la discapacidad...
 </svg>
 Video Explicativo
 </h4>
-<span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-[#003049] text-[#fdf0d5]">
-Próxima integración
-</span>
 </div>
 
-<!-- Contenedor del video interactivo / simulación -->
+<!-- Contenedor del video interactivo -->
 <div class="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl border-4 border-[#003049] bg-black group" id="video-container">
-<!-- El iframe dinámico se cargará aquí. Actualmente muestra una interfaz muy intuitiva -->
-<div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-gradient-to-t from-black via-black/80 to-[#003049]/80 text-[#fdf0d5] space-y-4">
-<div class="w-20 h-20 bg-[#fdf0d5] rounded-full flex items-center justify-center text-[#780000] shadow-lg group-hover:scale-110 active:scale-95 transition-all duration-300 cursor-pointer">
-<svg class="w-10 h-10 ml-2" fill="currentColor" viewBox="0 0 24 24">
-<path d="M8 5v14l11-7z"/>
-</svg>
-</div>
-<div class="max-w-md">
-<p class="font-bold text-lg" id="video-mockup-title">Cargando video interactivo...</p>
-<p class="text-sm text-[#fdf0d5]/70 mt-1">Aquí se mostrará el contenido audiovisual de YouTube para facilitar el aprendizaje visual.</p>
-</div>
-<!-- Nota técnica para el administrador -->
-<div class="text-[10px] uppercase tracking-wider bg-white/10 px-3 py-1 rounded-md text-[#fdf0d5]/50">
-Código preparado para incrustar iframe de YouTube
-</div>
-</div>
+<!-- El iframe dinámico se cargará aquí -->
 </div>
 </div>
 
@@ -305,22 +286,22 @@ title: "Discapacidad Visual",
 badge: "Discapacidad Sensorial",
 characterName: "Sofia",
 description: "¡Hola! Soy Sofia. Las personas con discapacidad visual percibimos el mundo a través del tacto, el oído, el olfato y, sobre todo, el corazón. Para ser independientes, muchos de nosotros utilizamos un bastón blanco que nos ayuda a detectar obstáculos en el camino, y leemos mediante el sistema Braille (puntos en relieve). ¡También nos encanta la tecnología que nos lee la pantalla en voz alta!",
-youtubeId: "2MtipwjcQyg", // Aquí colocarás el ID del video de youtube, ej: "l7N_T8jF_Lg"
+youtubeId: "2MtipwjcQyg", 
 characterSvg: `
-                   <svg class="w-28 h-28 text-[#fdf0d5]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                       <circle cx="50" cy="50" r="35" fill="#fdf0d5" stroke="#003049" stroke-width="4"/>
-                       <!-- Orejas bonitas de gato/lupa -->
-                       <path d="M25 22L38 30M75 22L62 30" stroke="#003049" stroke-width="4" stroke-linecap="round"/>
-                       <!-- Lentes oscuros elegantes -->
-                       <rect x="23" y="40" width="22" height="15" rx="5" fill="#003049"/>
-                       <rect x="55" y="40" width="22" height="15" rx="5" fill="#003049"/>
-                       <line x1="45" y1="47" x2="55" y2="47" stroke="#003049" stroke-width="4"/>
-                       <!-- Sonrisa amigable -->
-                       <path d="M42 67Q50 73 58 67" stroke="#003049" stroke-width="3" stroke-linecap="round" fill="none"/>
-                       <!-- Bastoncito de guía pequeño de adorno -->
-                       <line x1="48" y1="75" x2="52" y2="75" stroke="#ff8a8a" stroke-width="4" stroke-linecap="round"/>
-                   </svg>
-               `
+                    <svg class="w-28 h-28 text-[#fdf0d5]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="35" fill="#fdf0d5" stroke="#003049" stroke-width="4"/>
+                        <!-- Orejas bonitas de gato/lupa -->
+                        <path d="M25 22L38 30M75 22L62 30" stroke="#003049" stroke-width="4" stroke-linecap="round"/>
+                        <!-- Lentes oscuros elegantes -->
+                        <rect x="23" y="40" width="22" height="15" rx="5" fill="#003049"/>
+                        <rect x="55" y="40" width="22" height="15" rx="5" fill="#003049"/>
+                        <line x1="45" y1="47" x2="55" y2="47" stroke="#003049" stroke-width="4"/>
+                        <!-- Sonrisa amigable -->
+                        <path d="M42 67Q50 73 58 67" stroke="#003049" stroke-width="3" stroke-linecap="round" fill="none"/>
+                        <!-- Bastoncito de guía pequeño de adorno -->
+                        <line x1="48" y1="75" x2="52" y2="75" stroke="#ff8a8a" stroke-width="4" stroke-linecap="round"/>
+                    </svg>
+                `
 },
 auditiva: {
 title: "Discapacidad Auditiva",
@@ -329,18 +310,18 @@ characterName: "Emiliano",
 description: "¡Hola! Me llamo Emiliano. Las personas sordas o con pérdida auditiva nos comunicamos principalmente de forma visual. Nuestra lengua materna es la Lengua de Señas, la cual es rica, expresiva y tiene su propia gramática mediante hermosos movimientos de manos y gestos faciales. El silencio no impide que estemos llenos de historias increíbles que compartir.",
 youtubeId: "DEMO_YOUTUBE_ID_AUDITIVA",
 characterSvg: `
-                   <svg class="w-28 h-28 text-[#fdf0d5]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                       <circle cx="50" cy="50" r="35" fill="#fdf0d5" stroke="#003049" stroke-width="4"/>
-                       <!-- Orejas detalladas y grandes para representar la escucha -->
-                       <path d="M11 42Q5 45 11 55" stroke="#003049" stroke-width="4" stroke-linecap="round" fill="none"/>
-                       <path d="M89 42Q95 45 89 55" stroke="#003049" stroke-width="4" stroke-linecap="round" fill="none"/>
-                       <!-- Ojos felices mirando de lado -->
-                       <path d="M32 45Q37 40 42 45" stroke="#003049" stroke-width="3" stroke-linecap="round" fill="none"/>
-                       <path d="M58 45Q63 40 68 45" stroke="#003049" stroke-width="3" stroke-linecap="round" fill="none"/>
-                       <!-- Sonrisa abierta entusiasta -->
-                       <path d="M43 60Q50 72 57 60" fill="#003049" stroke="#003049" stroke-width="3" stroke-linecap="round"/>
-                   </svg>
-               `
+                    <svg class="w-28 h-28 text-[#fdf0d5]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="35" fill="#fdf0d5" stroke="#003049" stroke-width="4"/>
+                        <!-- Orejas detalladas y grandes para representar la escucha -->
+                        <path d="M11 42Q5 45 11 55" stroke="#003049" stroke-width="4" stroke-linecap="round" fill="none"/>
+                        <path d="M89 42Q95 45 89 55" stroke="#003049" stroke-width="4" stroke-linecap="round" fill="none"/>
+                        <!-- Ojos felices mirando de lado -->
+                        <path d="M32 45Q37 40 42 45" stroke="#003049" stroke-width="3" stroke-linecap="round" fill="none"/>
+                        <path d="M58 45Q63 40 68 45" stroke="#003049" stroke-width="3" stroke-linecap="round" fill="none"/>
+                        <!-- Sonrisa abierta entusiasta -->
+                        <path d="M43 60Q50 72 57 60" fill="#003049" stroke="#003049" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                `
 },
 motriz: {
 title: "Discapacidad Motriz",
@@ -349,21 +330,21 @@ characterName: "Luisa",
 description: "¡Hola! Soy Luisa. La discapacidad motriz significa que mi cuerpo necesita apoyo o adaptaciones (como mi súper silla de ruedas, andaderas o prótesis) para poder desplazarme o realizar movimientos con precisión. Lo más genial es que, cuando las escuelas y las ciudades cuentan con rampas anchas, elevadores y accesos nivelados, ¡puedo explorar el mundo entero sin límites!",
 youtubeId: "DEMO_YOUTUBE_ID_MOTRIZ",
 characterSvg: `
-                   <svg class="w-28 h-28 text-[#fdf0d5]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                       <circle cx="50" cy="45" r="30" fill="#fdf0d5" stroke="#003049" stroke-width="4"/>
-                       <!-- Casco deportivo genial -->
-                       <path d="M22 35Q50 15 78 35" fill="#003049"/>
-                       <!-- Ojos chispeantes de energía -->
-                       <circle cx="40" cy="45" r="3.5" fill="#003049"/>
-                       <circle cx="60" cy="45" r="3.5" fill="#003049"/>
-                       <path d="M38 41L42 41M58 41L62 41" stroke="#003049" stroke-width="2" stroke-linecap="round"/>
-                       <!-- Gran Sonrisa -->
-                       <path d="M41 58Q50 66 59 58" stroke="#003049" stroke-width="3" stroke-linecap="round" fill="none"/>
-                       <!-- Mejillas sonrosadas -->
-                       <circle cx="32" cy="52" r="3" fill="#ff8a8a"/>
-                       <circle cx="68" cy="52" r="3" fill="#ff8a8a"/>
-                   </svg>
-               `
+                    <svg class="w-28 h-28 text-[#fdf0d5]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="45" r="30" fill="#fdf0d5" stroke="#003049" stroke-width="4"/>
+                        <!-- Casco deportivo genial -->
+                        <path d="M22 35Q50 15 78 35" fill="#003049"/>
+                        <!-- Ojos chispeantes de energía -->
+                        <circle cx="40" cy="45" r="3.5" fill="#003049"/>
+                        <circle cx="60" cy="45" r="3.5" fill="#003049"/>
+                        <path d="M38 41L42 41M58 41L62 41" stroke="#003049" stroke-width="2" stroke-linecap="round"/>
+                        <!-- Gran Sonrisa -->
+                        <path d="M41 58Q50 66 59 58" stroke="#003049" stroke-width="3" stroke-linecap="round" fill="none"/>
+                        <!-- Mejillas sonrosadas -->
+                        <circle cx="32" cy="52" r="3" fill="#ff8a8a"/>
+                        <circle cx="68" cy="52" r="3" fill="#ff8a8a"/>
+                    </svg>
+                `
 },
 intelectual: {
 title: "Discapacidad Intelectual",
@@ -372,20 +353,20 @@ characterName: "Martin",
 description: "¡Hola, soy Martin! La discapacidad intelectual nos hace procesar la información de una manera un poco diferente y a ritmos particulares. Es genial cuando las personas nos explican con palabras sencillas, dibujos o textos en 'Lectura Fácil'. A veces nos cuesta un poquito más de tiempo aprender cosas nuevas, pero con paciencia, empatía y apoyos visuales, ¡logramos grandes metas!",
 youtubeId: "DEMO_YOUTUBE_ID_INTELECTUAL",
 characterSvg: `
-                   <svg class="w-28 h-28 text-[#fdf0d5]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                       <circle cx="50" cy="50" r="35" fill="#fdf0d5" stroke="#003049" stroke-width="4"/>
-                       <!-- Ojos llenos de curiosidad -->
-                       <circle cx="38" cy="48" r="4" fill="#003049"/>
-                       <circle cx="62" cy="48" r="4" fill="#003049"/>
-                       <!-- Cejas expresivas elevadas -->
-                       <path d="M32 40Q38 36 42 41" stroke="#003049" stroke-width="2" stroke-linecap="round" fill="none"/>
-                       <path d="M68 40Q62 36 58 41" stroke="#003049" stroke-width="2" stroke-linecap="round" fill="none"/>
-                       <!-- Sonrisa adorable con un diente gracioso -->
-                       <path d="M42 62Q50 70 58 62" stroke="#003049" stroke-width="3" stroke-linecap="round" fill="none"/>
-                       <!-- Corazón en la mejilla simbolizando empatía -->
-                       <path d="M48 30Q50 28 52 30Q54 32 50 36Q46 32 48 30Z" fill="#ff8a8a"/>
-                   </svg>
-               `
+                    <svg class="w-28 h-28 text-[#fdf0d5]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="35" fill="#fdf0d5" stroke="#003049" stroke-width="4"/>
+                        <!-- Ojos llenos de curiosidad -->
+                        <circle cx="38" cy="48" r="4" fill="#003049"/>
+                        <circle cx="62" cy="48" r="4" fill="#003049"/>
+                        <!-- Cejas expresivas elevadas -->
+                        <path d="M32 40Q38 36 42 41" stroke="#003049" stroke-width="2" stroke-linecap="round" fill="none"/>
+                        <path d="M68 40Q62 36 58 41" stroke="#003049" stroke-width="2" stroke-linecap="round" fill="none"/>
+                        <!-- Sonrisa adorable con un diente gracioso -->
+                        <path d="M42 62Q50 70 58 62" stroke="#003049" stroke-width="3" stroke-linecap="round" fill="none"/>
+                        <!-- Corazón en la mejilla simbolizando empatía -->
+                        <path d="M48 30Q50 28 52 30Q54 32 50 36Q46 32 48 30Z" fill="#ff8a8a"/>
+                    </svg>
+                `
 },
 psicosocial: {
 title: "Discapacidad Psicosocial",
@@ -394,19 +375,19 @@ characterName: "Linda",
 description: "¡Hola, soy Linda! La discapacidad psicosocial se relaciona con alteraciones temporales o permanentes en la forma en que sentimos, pensamos o interactuamos con nuestro entorno. Puede incluir condiciones de salud mental o neurodivergencias. Para nosotros es súper importante estar en espacios libres de prejuicios, llenos de respeto, apoyo emocional mutuo y sobre todo, comprensión profunda de que la mente humana es maravillosamente diversa.",
 youtubeId: "oUI37ir_JGA",
 characterSvg: `
-                   <svg class="w-28 h-28 text-[#fdf0d5]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                       <circle cx="50" cy="50" r="35" fill="#fdf0d5" stroke="#003049" stroke-width="4"/>
-                       <!-- Cabello rizado en forma de nubes/ideas -->
-                       <path d="M22 30C15 35 15 50 20 55C15 65 30 75 35 70M78 30C85 35 85 50 80 55C85 65 70 75 65 70" stroke="#003049" stroke-width="3" fill="none"/>
-                       <!-- Ojos pacíficos y relajados -->
-                       <path d="M34 50Q40 47 44 51" stroke="#003049" stroke-width="3" stroke-linecap="round" fill="none"/>
-                       <path d="M66 50Q60 47 56 51" stroke="#003049" stroke-width="3" stroke-linecap="round" fill="none"/>
-                       <!-- Sonrisa suave y calmada -->
-                       <path d="M44 65Q50 69 56 65" stroke="#003049" stroke-width="3.5" stroke-linecap="round" fill="none"/>
-                       <!-- Estrella mágica de calma -->
-                       <polygon points="50,22 52,27 57,27 53,30 55,35 50,32 45,35 47,30 43,27 48,27" fill="#ff8a8a"/>
-                   </svg>
-               `
+                    <svg class="w-28 h-28 text-[#fdf0d5]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="35" fill="#fdf0d5" stroke="#003049" stroke-width="4"/>
+                        <!-- Cabello rizado en forma de nubes/ideas -->
+                        <path d="M22 30C15 35 15 50 20 55C15 65 30 75 35 70M78 30C85 35 85 50 80 55C85 65 70 75 65 70" stroke="#003049" stroke-width="3" fill="none"/>
+                        <!-- Ojos pacíficos y relajados -->
+                        <path d="M34 50Q40 47 44 51" stroke="#003049" stroke-width="3" stroke-linecap="round" fill="none"/>
+                        <path d="M66 50Q60 47 56 51" stroke="#003049" stroke-width="3" stroke-linecap="round" fill="none"/>
+                        <!-- Sonrisa suave y calmada -->
+                        <path d="M44 65Q50 69 56 65" stroke="#003049" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+                        <!-- Estrella mágica de calma -->
+                        <polygon points="50,22 52,27 57,27 53,30 55,35 50,32 45,35 47,30 43,27 48,27" fill="#ff8a8a"/>
+                    </svg>
+                `
 }
 };
 
@@ -443,50 +424,39 @@ document.getElementById('character-avatar').innerHTML = data.characterSvg;
 // Preparar el contenedor de video de YouTube
 const videoContainer = document.getElementById('video-container');
 
-/* 
-              NOTA PARA EL ADMINISTRADOR:
-              Cuando tengas los links reales de YouTube, puedes reemplazar la maqueta visual 
-              descomentando la sección inferior de JavaScript para renderizar el iframe oficial.
-           */
-
-// TITULO DEL VIDEO DE MAQUETA
-document.getElementById('video-mockup-title').innerText = `Video Educativo: Explicando la ${data.title}`;
-
-// EJEMPLO DE RENDERIZADO DEL IFRAME DE YOUTUBE (Para cuando tengas los enlaces listos):
-
-           if (data.youtubeId && data.youtubeId !== "" && !data.youtubeId.startsWith("DEMO_")) {
-               videoContainer.innerHTML = `
-                   <iframe 
-                       class="w-full h-full" 
-                       src="https://www.youtube.com/embed/oUI37ir_JGA" 
-                       title="${data.title}" 
-                       frameborder="0" 
-                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                       allowfullscreen>
-                   </iframe>
-               `;
-           } else {
-               // Mantener maqueta visual si no hay ID cargado
-               videoContainer.innerHTML = `
-                   <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-gradient-to-t from-black via-black/80 to-[#003049]/80 text-[#fdf0d5] space-y-4">
-                       <div class="w-16 h-16 bg-[#fdf0d5] rounded-full flex items-center justify-center text-[#780000] shadow-lg hover:scale-110 active:scale-95 transition-all duration-300 cursor-pointer">
-                           <svg class="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 24 24">
-                               <path d="M8 5v14l11-7z"/>
-                           </svg>
-                       </div>
-                       <div class="max-w-md">
-                           <p class="font-bold text-lg">Próximamente: Video de ${data.title}</p>
-                           <p class="text-xs text-[#fdf0d5]/70 mt-1">Inserta tu ID de YouTube en el código para mostrar el video real.</p>
-                       </div>
-                   </div>
-               `;
-           }
-           
+// CARGA DEL REPRODUCTOR CON SEGURIDAD (Cero errores de cookies y referers)
+if (data.youtubeId && data.youtubeId !== "" && !data.youtubeId.startsWith("DEMO_")) {
+    videoContainer.innerHTML = `
+        <iframe 
+            class="w-full h-full" 
+            src="https://www.youtube-nocookie.com/embed/${data.youtubeId}" 
+            title="${data.title}" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+        </iframe>
+    `;
+} else {
+    // Mantener maqueta visual si no hay ID cargado real, agregando el id del mockup-title para evitar futuros fallos.
+    videoContainer.innerHTML = `
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-gradient-to-t from-black via-black/80 to-[#003049]/80 text-[#fdf0d5] space-y-4">
+            <div class="w-16 h-16 bg-[#fdf0d5] rounded-full flex items-center justify-center text-[#780000] shadow-lg hover:scale-110 active:scale-95 transition-all duration-300 cursor-pointer">
+                <svg class="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                </svg>
+            </div>
+            <div class="max-w-md">
+                <p class="font-bold text-lg" id="video-mockup-title">Próximamente: Video de ${data.title}</p>
+                <p class="text-xs text-[#fdf0d5]/70 mt-1">Aquí se integrará el contenido de YouTube correspondiente.</p>
+            </div>
+        </div>
+    `;
+}
 
 // Ir a la pestaña de detalles
 goToScreen('screen-detail');
 }
 </script>
 </body>
-</html>
 </html>
