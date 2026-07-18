@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Aprende sobre la Inclusión - Sitio Informativo</title>
 <script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght=300;400;600;700;800&display=swap" rel="stylesheet">
 <style>
 body {
 font-family: 'Inter', sans-serif;
@@ -13,7 +13,7 @@ background-color: #780000;
 color: #fdf0d5;
 transition: all 0.3s ease-in-out;
 }
-/* Custom scrollbar for beautiful appearance */
+/* Scrollbar personalizado */
 ::-webkit-scrollbar {
 width: 8px;
 }
@@ -24,7 +24,7 @@ background: #780000;
 background: #fdf0d5;
 border-radius: 10px;
 }
-/* Fade-in transitions for screen navigation */
+/* Transiciones fluidas entre pantallas */
 .screen-transition {
 animation: fadeIn 0.5s ease-out forwards;
 }
@@ -58,6 +58,7 @@ Un espacio donde los muppets hacen de la inclusión una aventura de aprendizaje.
 </p>
 </div>
 
+<!-- Imagen de bienvenida con fallback automático por si no carga de local -->
 <img src="img/Especial mupps.png" alt="Especial Mupps" width="50%" onerror="this.src='https://placehold.co/600x300/fdf0d5/003049?text=Especial+Mupps'">
 
 <button onclick="goToScreen('screen-character-intro')" 
@@ -72,22 +73,15 @@ Entrar
 <div class="flex flex-col md:flex-row items-center gap-8">
 <!-- Avatar del Personaje Guía (Gabriel) -->
 <div class="w-40 h-40 bg-[#003049] rounded-full flex-shrink-0 flex items-center justify-center shadow-lg border-4 border-[#fdf0d5] overflow-hidden relative">
-<!-- SVG de Gabriel, un personaje simpático -->
 <svg class="w-32 h-32 text-[#fdf0d5]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-<!-- Cabeza y cuerpo -->
 <circle cx="50" cy="45" r="30" fill="#fdf0d5" stroke="#003049" stroke-width="4"/>
-<!-- Pelo alegre -->
 <path d="M22 35C22 35 30 20 50 25C70 20 78 35 78 35" stroke="#003049" stroke-width="5" stroke-linecap="round"/>
-<!-- Ojos expresivos -->
 <circle cx="40" cy="45" r="4" fill="#003049"/>
 <circle cx="60" cy="45" r="4" fill="#003049"/>
-<!-- Gafas de explorador/sabio -->
 <circle cx="40" cy="45" r="9" stroke="#003049" stroke-width="3"/>
 <circle cx="60" cy="45" r="9" stroke="#003049" stroke-width="3"/>
 <line x1="49" y1="45" x2="51" y2="45" stroke="#003049" stroke-width="3"/>
-<!-- Gran Sonrisa -->
 <path d="M40 60Q50 68 60 60" stroke="#003049" stroke-width="4" stroke-linecap="round" fill="none"/>
-<!-- Sonrojo tierno -->
 <circle cx="31" cy="53" r="3" fill="#ff8a8a"/>
 <circle cx="69" cy="53" r="3" fill="#ff8a8a"/>
 </svg>
@@ -264,7 +258,7 @@ Video Explicativo
 </div>
 
 <!-- Contenedor del video interactivo -->
-<div class="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl border-4 border-[#003049] bg-black group" id="video-container">
+<div class="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl border-4 border-[#003049] bg-black" id="video-container">
 <!-- El iframe dinámico se cargará aquí -->
 </div>
 </div>
@@ -279,7 +273,8 @@ Video Explicativo
 </footer>
 
 <script>
-// Data de las discapacidades, personajes y videos
+// Data de las discapacidades, personajes y videos de YouTube.
+// ¡Aquí puedes pegar directamente los enlaces completos de YouTube o solo el código ID!
 const disabilitiesData = {
 visual: {
 title: "Discapacidad Visual",
@@ -290,15 +285,11 @@ youtubeId: "2MtipwjcQyg",
 characterSvg: `
                     <svg class="w-28 h-28 text-[#fdf0d5]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="50" cy="50" r="35" fill="#fdf0d5" stroke="#003049" stroke-width="4"/>
-                        <!-- Orejas bonitas de gato/lupa -->
                         <path d="M25 22L38 30M75 22L62 30" stroke="#003049" stroke-width="4" stroke-linecap="round"/>
-                        <!-- Lentes oscuros elegantes -->
                         <rect x="23" y="40" width="22" height="15" rx="5" fill="#003049"/>
                         <rect x="55" y="40" width="22" height="15" rx="5" fill="#003049"/>
                         <line x1="45" y1="47" x2="55" y2="47" stroke="#003049" stroke-width="4"/>
-                        <!-- Sonrisa amigable -->
                         <path d="M42 67Q50 73 58 67" stroke="#003049" stroke-width="3" stroke-linecap="round" fill="none"/>
-                        <!-- Bastoncito de guía pequeño de adorno -->
                         <line x1="48" y1="75" x2="52" y2="75" stroke="#ff8a8a" stroke-width="4" stroke-linecap="round"/>
                     </svg>
                 `
@@ -312,13 +303,10 @@ youtubeId: "DEMO_YOUTUBE_ID_AUDITIVA",
 characterSvg: `
                     <svg class="w-28 h-28 text-[#fdf0d5]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="50" cy="50" r="35" fill="#fdf0d5" stroke="#003049" stroke-width="4"/>
-                        <!-- Orejas detalladas y grandes para representar la escucha -->
                         <path d="M11 42Q5 45 11 55" stroke="#003049" stroke-width="4" stroke-linecap="round" fill="none"/>
                         <path d="M89 42Q95 45 89 55" stroke="#003049" stroke-width="4" stroke-linecap="round" fill="none"/>
-                        <!-- Ojos felices mirando de lado -->
                         <path d="M32 45Q37 40 42 45" stroke="#003049" stroke-width="3" stroke-linecap="round" fill="none"/>
                         <path d="M58 45Q63 40 68 45" stroke="#003049" stroke-width="3" stroke-linecap="round" fill="none"/>
-                        <!-- Sonrisa abierta entusiasta -->
                         <path d="M43 60Q50 72 57 60" fill="#003049" stroke="#003049" stroke-width="3" stroke-linecap="round"/>
                     </svg>
                 `
@@ -328,19 +316,15 @@ title: "Discapacidad Motriz",
 badge: "Discapacidad Física",
 characterName: "Luisa",
 description: "¡Hola! Soy Luisa. La discapacidad motriz significa que mi cuerpo necesita apoyo o adaptaciones (como mi súper silla de ruedas, andaderas o prótesis) para poder desplazarme o realizar movimientos con precisión. Lo más genial es que, cuando las escuelas y las ciudades cuentan con rampas anchas, elevadores y accesos nivelados, ¡puedo explorar el mundo entero sin límites!",
-youtubeId: "DEMO_YOUTUBE_ID_MOTRIZ",
+youtubeId: "3mZzZ76PLmk", // Aquí puedes poner el link que desees de youtube
 characterSvg: `
                     <svg class="w-28 h-28 text-[#fdf0d5]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="50" cy="45" r="30" fill="#fdf0d5" stroke="#003049" stroke-width="4"/>
-                        <!-- Casco deportivo genial -->
                         <path d="M22 35Q50 15 78 35" fill="#003049"/>
-                        <!-- Ojos chispeantes de energía -->
                         <circle cx="40" cy="45" r="3.5" fill="#003049"/>
                         <circle cx="60" cy="45" r="3.5" fill="#003049"/>
                         <path d="M38 41L42 41M58 41L62 41" stroke="#003049" stroke-width="2" stroke-linecap="round"/>
-                        <!-- Gran Sonrisa -->
                         <path d="M41 58Q50 66 59 58" stroke="#003049" stroke-width="3" stroke-linecap="round" fill="none"/>
-                        <!-- Mejillas sonrosadas -->
                         <circle cx="32" cy="52" r="3" fill="#ff8a8a"/>
                         <circle cx="68" cy="52" r="3" fill="#ff8a8a"/>
                     </svg>
@@ -355,15 +339,11 @@ youtubeId: "DEMO_YOUTUBE_ID_INTELECTUAL",
 characterSvg: `
                     <svg class="w-28 h-28 text-[#fdf0d5]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="50" cy="50" r="35" fill="#fdf0d5" stroke="#003049" stroke-width="4"/>
-                        <!-- Ojos llenos de curiosidad -->
                         <circle cx="38" cy="48" r="4" fill="#003049"/>
                         <circle cx="62" cy="48" r="4" fill="#003049"/>
-                        <!-- Cejas expresivas elevadas -->
                         <path d="M32 40Q38 36 42 41" stroke="#003049" stroke-width="2" stroke-linecap="round" fill="none"/>
                         <path d="M68 40Q62 36 58 41" stroke="#003049" stroke-width="2" stroke-linecap="round" fill="none"/>
-                        <!-- Sonrisa adorable con un diente gracioso -->
                         <path d="M42 62Q50 70 58 62" stroke="#003049" stroke-width="3" stroke-linecap="round" fill="none"/>
-                        <!-- Corazón en la mejilla simbolizando empatía -->
                         <path d="M48 30Q50 28 52 30Q54 32 50 36Q46 32 48 30Z" fill="#ff8a8a"/>
                     </svg>
                 `
@@ -377,85 +357,116 @@ youtubeId: "oUI37ir_JGA",
 characterSvg: `
                     <svg class="w-28 h-28 text-[#fdf0d5]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="50" cy="50" r="35" fill="#fdf0d5" stroke="#003049" stroke-width="4"/>
-                        <!-- Cabello rizado en forma de nubes/ideas -->
                         <path d="M22 30C15 35 15 50 20 55C15 65 30 75 35 70M78 30C85 35 85 50 80 55C85 65 70 75 65 70" stroke="#003049" stroke-width="3" fill="none"/>
-                        <!-- Ojos pacíficos y relajados -->
                         <path d="M34 50Q40 47 44 51" stroke="#003049" stroke-width="3" stroke-linecap="round" fill="none"/>
                         <path d="M66 50Q60 47 56 51" stroke="#003049" stroke-width="3" stroke-linecap="round" fill="none"/>
-                        <!-- Sonrisa suave y calmada -->
                         <path d="M44 65Q50 69 56 65" stroke="#003049" stroke-width="3.5" stroke-linecap="round" fill="none"/>
-                        <!-- Estrella mágica de calma -->
                         <polygon points="50,22 52,27 57,27 53,30 55,35 50,32 45,35 47,30 43,27 48,27" fill="#ff8a8a"/>
                     </svg>
                 `
 }
 };
 
-// Función para cambiar de pestaña con suavidad
+/**
+ * Extrae de forma limpia el ID único de 11 caracteres de cualquier URL de YouTube.
+ * Soporta links completos de PC, links recortados de celulares y URLs embebidas.
+ */
+function cleanYouTubeId(input) {
+    if (!input) return "";
+    input = input.trim();
+    // Si ya es un ID directo de 11 caracteres
+    if (input.length === 11 && !input.includes("/") && !input.includes("?")) {
+        return input;
+    }
+    // Expresión regular para extraer IDs de cualquier formato de enlace
+    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+    const match = input.match(regExp);
+    return (match && match[2].length === 11) ? match[2] : input;
+}
+
+// Función para cambiar de pestaña de forma fluida y segura
 function goToScreen(screenId) {
-// Ocultar todas las secciones principales
-const screens = ['screen-welcome', 'screen-character-intro', 'screen-dashboard', 'screen-detail'];
-screens.forEach(id => {
-const el = document.getElementById(id);
-if (el) el.classList.add('hidden');
-});
+    const screens = ['screen-welcome', 'screen-character-intro', 'screen-dashboard', 'screen-detail'];
+    screens.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.classList.add('hidden');
+    });
 
-// Mostrar la seleccionada
-const targetScreen = document.getElementById(screenId);
-if (targetScreen) {
-targetScreen.classList.remove('hidden');
-// Scroll arriba automáticamente para mejor experiencia de usuario
-window.scrollTo({ top: 0, behavior: 'smooth' });
-}
+    // Detener y limpiar el video al salir de la pantalla de detalles
+    if (screenId !== 'screen-detail') {
+        const videoContainer = document.getElementById('video-container');
+        if (videoContainer) {
+            videoContainer.innerHTML = ''; 
+        }
+    }
+
+    const targetScreen = document.getElementById(screenId);
+    if (targetScreen) {
+        targetScreen.classList.remove('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 }
 
-// Función para abrir los detalles de la discapacidad seleccionada
+// Función para abrir y armar los detalles de la discapacidad seleccionada
 function viewDisability(key) {
-const data = disabilitiesData[key];
-if (!data) return;
+    const data = disabilitiesData[key];
+    if (!data) return;
 
-// Llenar información de la interfaz
-document.getElementById('detail-title').innerText = data.title;
-document.getElementById('detail-badge-title').innerText = data.badge;
-document.getElementById('character-name').innerText = data.characterName;
-document.getElementById('detail-description').innerText = data.description;
-document.getElementById('character-avatar').innerHTML = data.characterSvg;
+    // Llenar información de la interfaz de manera 100% segura (Defensa contra caídas de JS)
+    const titleEl = document.getElementById('detail-title');
+    if (titleEl) titleEl.innerText = data.title;
 
-// Preparar el contenedor de video de YouTube
-const videoContainer = document.getElementById('video-container');
+    const badgeEl = document.getElementById('detail-badge-title');
+    if (badgeEl) badgeEl.innerText = data.badge;
 
-// CARGA DEL REPRODUCTOR CON SEGURIDAD (Cero errores de cookies y referers)
-if (data.youtubeId && data.youtubeId !== "" && !data.youtubeId.startsWith("DEMO_")) {
-    videoContainer.innerHTML = `
-        <iframe 
-            class="w-full h-full" 
-            src="https://www.youtube-nocookie.com/embed/${data.youtubeId}" 
-            title="${data.title}" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen>
-        </iframe>
-    `;
-} else {
-    // Mantener maqueta visual si no hay ID cargado real, agregando el id del mockup-title para evitar futuros fallos.
-    videoContainer.innerHTML = `
-        <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-gradient-to-t from-black via-black/80 to-[#003049]/80 text-[#fdf0d5] space-y-4">
-            <div class="w-16 h-16 bg-[#fdf0d5] rounded-full flex items-center justify-center text-[#780000] shadow-lg hover:scale-110 active:scale-95 transition-all duration-300 cursor-pointer">
-                <svg class="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z"/>
-                </svg>
-            </div>
-            <div class="max-w-md">
-                <p class="font-bold text-lg" id="video-mockup-title">Próximamente: Video de ${data.title}</p>
-                <p class="text-xs text-[#fdf0d5]/70 mt-1">Aquí se integrará el contenido de YouTube correspondiente.</p>
-            </div>
-        </div>
-    `;
-}
+    const nameEl = document.getElementById('character-name');
+    if (nameEl) nameEl.innerText = data.characterName;
 
-// Ir a la pestaña de detalles
-goToScreen('screen-detail');
+    const descEl = document.getElementById('detail-description');
+    if (descEl) descEl.innerText = data.description;
+
+    const avatarEl = document.getElementById('character-avatar');
+    if (avatarEl) avatarEl.innerHTML = data.characterSvg;
+
+    // Preparar el contenedor del video
+    const videoContainer = document.getElementById('video-container');
+    if (videoContainer) {
+        const cleanId = cleanYouTubeId(data.youtubeId);
+
+        if (cleanId && cleanId !== "" && !cleanId.startsWith("DEMO_")) {
+            // Construimos la URL de incrustación de manera segura y libre de cookies publicitarias
+            const secureEmbedUrl = 'https://www.youtube-nocookie.com/embed/' + cleanId;
+            videoContainer.innerHTML = `
+                <iframe 
+                    class="w-full h-full absolute inset-0" 
+                    src="${secureEmbedUrl}" 
+                    title="${data.title}" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                </iframe>
+            `;
+        } else {
+            // Maqueta interactiva alternativa si no se ha agregado un ID real
+            videoContainer.innerHTML = `
+                <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-gradient-to-t from-black via-black/80 to-[#003049]/80 text-[#fdf0d5] space-y-4">
+                    <div class="w-16 h-16 bg-[#fdf0d5] rounded-full flex items-center justify-center text-[#780000] shadow-lg hover:scale-110 active:scale-95 transition-all duration-300 cursor-pointer">
+                        <svg class="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
+                    <div class="max-w-md">
+                        <p class="font-bold text-lg">Próximamente: Video de ${data.title}</p>
+                        <p class="text-xs text-[#fdf0d5]/70 mt-1">Sustituye la propiedad 'youtubeId' de este personaje en el script con el link de tu video.</p>
+                    </div>
+                </div>
+            `;
+        }
+    }
+
+    // Navegar de forma fluida al detalle
+    goToScreen('screen-detail');
 }
 </script>
 </body>
